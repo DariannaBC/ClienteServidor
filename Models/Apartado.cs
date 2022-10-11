@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClienteServidor.Models
 {
-    class Apartado
+    public class Apartado
     {
         [Key]
         public int Id { get; set; }
@@ -16,5 +16,6 @@ namespace ClienteServidor.Models
         public string Cedula { get; set; }
 
         public  DateTime Fecha { get; set; }
+
     }
 }

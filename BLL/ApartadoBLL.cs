@@ -19,7 +19,7 @@ namespace ClienteServidor.BLL
     {
         public class ApartadoBLL
         {
-            private static Apartado Buscar(int id)
+            public static Apartado Buscar(int id)
             {
                 Contexto contexto = new Contexto();
                 Apartado apartado;
@@ -38,7 +38,7 @@ namespace ClienteServidor.BLL
                 }
                 return apartado;
             }
-            private static List<Apartado> GetApartados()
+            public static List<Apartado> GetApartados()
             {
                 Contexto contexto = new Contexto();
                 List<Apartado> lista = new List<Apartado>();
@@ -75,7 +75,7 @@ namespace ClienteServidor.BLL
                 }
                 return paso;
             }
-            private static bool Insertar(Apartado apartado)
+            public static bool Insertar(Apartado apartado)
             {
                 bool paso = false;
                 Contexto contexto = new Contexto();
@@ -96,7 +96,7 @@ namespace ClienteServidor.BLL
                 return paso;
             }
 
-            private static bool Modificar(Apartado apartado)
+            public static bool Modificar(Apartado apartado)
             {
                 bool paso = false;
                 Contexto contexto = new Contexto();
@@ -118,7 +118,7 @@ namespace ClienteServidor.BLL
                 return paso;
 
             }
-            private static bool Guardar(Apartado apartado)
+            public static bool Guardar(Apartado apartado)
             {
                 if (!Existe(apartado.Id))
                     return Insertar(apartado);
